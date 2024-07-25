@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+       
+        <div class="container_izquierdo">
+            <img src="./Imagenes/Logo.png" alt="" class="contenedor_img2">           
+            <textarea  id="caja_texto1" class="contenedor_texto1">Ingrese su texto aquí</textarea>
+            <div>
+                <div class="contenedor_advertencia" >        
+                    <button disabled class="contenedor_simbolo">!</button>
+                    <textarea readonly class="contenedor_mensaje_advertencia">Solo letras minúsculas y sin acentos</textarea>
+                </div>
+                <div class="contenedor_botones">                
+                    <button class="contenedor_boton_encriptar" onclick="encriptarTexto();">Encriptar</button>
+                    <button class="contenedor_boton_desencriptar" onclick="desencriptar()"> Desencriptar</button>
+                </div>
+                <button class="contenedor_boton_reset" onclick="reset();">RESET</button>
+            </div>
+
+        </div>
+        <div class="container_derecho">
+            <img  id="imagenMuneco" src="./Imagenes/dummy.png" alt="imagen de una persona con una lente inspeccionando" class="contenedor_img">
+            <div class="contenedor_texto2">    
+                <textarea class="mensaje1" id="caja_texto3" readonly>Ningún mensaje fue encontrado</textarea>
+                <textarea id="caja_texto2" class="mensaje2" readonly>Ingresa el texto que desees encriptar o desencriptar.</textarea>
+                </div>
+                <button  id="boton_copiar" class="contenedor_boton_copiar" onclick="copiarTexto();"> Copiar</button>
+        </div>
+
+
+    <!-- Estructura del cuadro de diálogo -->
+    <dialog id="dialogo" class="ventDialog">
+        <div class="dialogmarco1">
+            <!-- Contenedor de la imagen -->
+            <div class="imgMarco" id="maroImg">
+                <img src="./Imagenes/advertencia.gif" id="img" class="dialog_img">
+            </div>
+            <!-- Contenedor de los cuadros de texto -->
+            <div class="Frame_texto_advertencia" id="ft_advertencia">
+                <textarea class="Tx_adv1" id="texto_modal1" readonly>Texto</textarea>
+                <textarea class="Tx_adv2" id="texto_modal2" readonly>texto</textarea>
+            </div>
+        </div>
+        <!-- Botón de cerrar -->
+        <!--<div class="frame_boton_cerrar">-->
+            <button onclick="cerrar();" class="boton_cerrar">Cerrar</button>
+        <!--</div>-->
+    </dialog>
+
+ 
+        <link rel="stylesheet" href="style.css">        
+        <script src="app.js"></script>
+
+    </body>
+</html>
+
