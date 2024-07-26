@@ -4,6 +4,7 @@
     font-family: 'Inter', sans-serif;
 }
 
+/*configurando el cuerpod el página*/
 body{
     background-color: #F3F5FC;
     display: flex;
@@ -12,6 +13,10 @@ body{
     font-family: 'Inter', sans-serif;
     justify-self: center;     
 }
+
+
+/*configurando el contenedor donde se encuentra el texto a encriptar, 
+los botones reset, encriptar y desencriptar.*/
 
 .container_izquierdo{
     position: relative;
@@ -22,28 +27,14 @@ body{
     justify-content: space-around;    
 }   
 
-.container_derecho{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 1rem;
-    position: relative;
-    justify-content: center; 
-    width: 20%;
-    outline: #0A3871;    
-}   
-
+/*logotipo de Alura*/
 .contenedor_img{
-   width: 90%;      
-}
+    width: 90%;      
+ }
 
-.contenedor_img2 {
-    width: 3.75rem;
-    height: 3rem; 
-    align-self: flex-start;  
-}
 
-.contenedor_texto1{
+ /*cuadro de texto editable.*/
+ .contenedor_texto1{
     height: 12.5rem;
     width: 90%;
     font-size: 1rem;
@@ -56,7 +47,6 @@ body{
     background-color: transparent;
     
 }
-
 .contenedor_texto2{
     /* solo sirve para agrupar los botones y el mensaje de adventencia
     encima de ellos*/
@@ -65,15 +55,15 @@ body{
     align-items: center;
     justify-content: center;
     text-align: center;
+
    
 }
-
+/*agrupa el mensaje y el simbolo de admiración*/
 .contenedor_advertencia{
     justify-self: flex-end;
     display: inline;    
 }
-
-
+/* texto pequeño en rojo */
 .contenedor_mensaje_advertencia{
     font-size: .7rem;
     scrollbar-width: none;
@@ -86,9 +76,8 @@ body{
     height: 13%;  
     background-color: transparent;        
   }
-
-
-.contenedor_simbolo{
+/*simbolo de adminración*/
+  .contenedor_simbolo{
     font-size: .75rem;
     border-radius: 3rem;
     color: yellow;
@@ -127,6 +116,42 @@ body{
     border-radius: 1rem;
     padding: 1rem 2rem;   
 }
+
+.contenedor_boton_reset{
+    
+    background-color: #a0bfe8;    ;
+    margin: 0 0.3125rem;
+    color: blueviolet;
+    border: none;
+    width: 100%;
+    height: 3.125rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;  
+}
+
+
+/*configuración del contenedor principal derecho donde se encuentras todos
+los objetos de ese lado*/
+.container_derecho{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+    justify-content: center; 
+    width: 20%;
+    outline: #0A3871;    
+}   
+
+/*configuración de la imagen del chico con la lupa*/
+.contenedor_img2 {
+    width: 3.75rem;
+    height: 3rem; 
+    align-self: flex-start;  
+}
+
+/*cuadros de texto del lado derecho*/
+
 .mensaje1{
     font-size: 1.5rem;
     width: 100%;
@@ -152,31 +177,21 @@ body{
     resize: none;
         
 }
-    .contenedor_boton_copiar{
-        background-color: #D8DFE8;    ;
-        margin: 0 0.3125rem;
-        color: blueviolet;
-        border: none;
-        width: 12.5rem;
-        height: 3.125rem;
-        border-radius: 1rem;
-        padding: 1rem 2rem;
-        align-self: center;
-        display: none;
 
-    }
-
-.contenedor_boton_reset{
-    
-    background-color: #a0bfe8;    ;
+.contenedor_boton_copiar{
+    background-color: #D8DFE8;    ;
     margin: 0 0.3125rem;
     color: blueviolet;
     border: none;
-    width: 100%;
+    width: 12.5rem;
     height: 3.125rem;
     border-radius: 1rem;
-    padding: 1rem 2rem;  
+    padding: 1rem 2rem;
+    align-self: center;
+    display: none;
+
 }
+
 
 
 

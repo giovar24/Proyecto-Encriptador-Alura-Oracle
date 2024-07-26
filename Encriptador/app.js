@@ -39,13 +39,17 @@ function mostrarImagen() {
     botonCopiar.style.display = "none";
 }
 
+//esta función valida que el texto procesado cumpa con los requeisitos
 function validarTexto(opcion) {
+    //creando las variable necesaria y cargando datos en ellas
     imagenModal.style.display = "block";
     let validado = 0;
     let regex = /[A-ZéíóáúñÑ]/g;
     let regex2 = /enter|imes|ai|ober|ufat/g;
     let texto = textoIzquierdo1.value.trim();
 
+
+    //arbon de if else para validar los datos de entrada.
     if (texto === "Ingrese su texto aquí" || texto === "") {
         validado = 1;
     } else if (texto === textoProcesado){
@@ -55,8 +59,8 @@ function validarTexto(opcion) {
     } else if (opcion === 2 && regex2.test(texto) !== true) {
         validado = 3;
     }
-    console.log(validado);
-
+    
+    //devuelve  un valor diferente de 0  si no  ha cumplido con los requistos para procesar el texto.
     desplegarModal(validado);
     return validado;
 }
@@ -77,6 +81,7 @@ function desplegarModal(opcion){
             vantanaModal.showModal();       
          break;
          case 3:
+            //alert("Ningún mensaje fue encontrado");
             tmodal1.value = "¡Error!";
             tmodal2.value ="Ningún mensaje fue encontrado"   
             imagenModal.style.display= "none";    
@@ -84,11 +89,11 @@ function desplegarModal(opcion){
                
         break; 
         case 4:
+            // devueve una ventana de modal si ya se ha trabajado el texto en la caja.
             tmodal1.value = "";
             tmodal2.value =`El texto ya fue procesado como ${proceso=1?"encriptado":"desencriptado"}`;  
             vantanaModal.showModal();
         break;   
-
     
         default:
             break;
@@ -178,6 +183,7 @@ function reset() {
     proceso = 0;
 }
 
+//copia el texto de caja  de texto derecha y devuelve una ventana modal 
 function copiarTexto() {
     navigator.clipboard.writeText(textoDerecho3.value);
     botonCopiar.style.backgroundColor = "#9b9b9b";
@@ -190,6 +196,8 @@ function copiarTexto() {
 
 
 }
+
+//cierra la ventana modal y pone en "" sus textos.
 function cerrar(){
     tmodal2.value ="";
     tmodal1.value="";
